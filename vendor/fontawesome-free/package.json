@@ -2,7 +2,7 @@
   "_args": [
     [
       "@fortawesome/fontawesome-free@5.9.0",
-      "C:\\Users\\WASEDA\\Documents\\startbootstrap-sb-admin-2"
+      "G:\\workplace\\sse2019-group5"
     ]
   ],
   "_from": "@fortawesome/fontawesome-free@5.9.0",
@@ -27,7 +27,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.9.0.tgz",
   "_spec": "5.9.0",
-  "_where": "C:\\Users\\WASEDA\\Documents\\startbootstrap-sb-admin-2",
+  "_where": "G:\\workplace\\sse2019-group5",
   "author": {
     "name": "Dave Gandy",
     "email": "dave@fontawesome.com",
