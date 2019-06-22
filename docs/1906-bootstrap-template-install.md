@@ -13,11 +13,11 @@
 ## Environment
 
 ```
-G:\workplace\sse2019-group5>npm --version
-3.10.8
-
 G:\workplace\sse2019-group5>node --version
-v6.9.1
+v10.16.0
+
+G:\workplace\sse2019-group5>npm --version
+6.9.0
 ```
 
 - node
@@ -60,6 +60,7 @@ G:\workplace\sse2019-group5>npm start
 
 ### 3. structure
 
+- 別途
 
 
 ### Appendix
