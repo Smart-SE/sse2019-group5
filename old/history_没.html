@@ -303,64 +303,42 @@
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">最近１週間の栄養バランス</h6>
+                  <h6 class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sampleModal">
+                  詳細へ
+                  </h6>
                 </div>
-                <div class="card-body">
-                  <h4 class="small font-weight-bold">エネルギー(kcal) <span class="float-right">10%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">タンパク質(g) <span class="float-right">20%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">脂質(g) <span class="float-right">30%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">炭水化物(g) <span class="float-right">40%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">鉄(mg) <span class="float-right">50%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">ビタミンA(μg) <span class="float-right">50%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">ビタミンB1(mg) <span class="float-right">50%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">ビタミンB2(mg) <span class="float-right">50%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">ビタミンC(mg) <span class="float-right">50%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">食物繊維(g) <span class="float-right">80%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">飽和脂肪酸(mg) <span class="float-right">90%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">塩分(g) <span class="float-right">Complete!</span></h4>
-                  <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <script>
-                  var element = document.getElementByClassName( "card-body" ) ;
-                  element.label= ["20%", "40%", "60", "80", "p4", "p5", "p6", "p7", "p8", "p9", "p10", "p11"];
-                  </script>
-                </div>
+				      	<canvas id="chart" height="500" width="500"></canvas>
               </div>
             </div>
 
+            <div class="col-lg-6 mb-4">
+
+              <!-- Illustrations -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">状況評価</h6>
+                </div>
+                <div class="card-body">
+                  <div class="text-center">
+                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="img/undraw_posting_photo.svg" alt="">
+                  </div>
+                  <p>もう少しバランスよく食べましょう！</p>
+                  <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on unDraw &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Approach -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">アドバイス</h6>
+                </div>
+                <div class="card-body">
+                  <p>食物繊維は、・・・・・・</p>
+                  <p class="mb-0">Before working with this theme, you should become familiar with the Bootstrap framework, especially the utility classes.</p>
+                </div>
+              </div>
+
+            </div>
           </div>
           <!-- ↑↑↑↑ これより下のdivを変更 -->
 
@@ -370,6 +348,22 @@
       </div>
       <!-- End of Main Content -->
 
+      <!-- モーダル・ダイアログ -->
+      <div class="modal fade" id="sampleModal" tabindex="-1">
+      	<div class="modal-dialog">
+      		<div class="modal-content">
+      			<div class="modal-header">
+      				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+      				<h4 class="modal-title">一覧に戻る</h4>
+      			</div>
+      			<!-- contents body -->
+      				<div>
+      					<canvas id="ex_chart" height="500" width="500"></canvas>
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+      </div>
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
@@ -426,6 +420,88 @@
   <!-- Page level custom scripts -->
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
+
+  <script>
+    var ctx = document.getElementById('chart');
+    var labelplugin = {
+      afterDatasetsDraw: function (chart) {
+        // ラベルのフォントやサイズや、位置を指定する
+      }
+    }
+    var data = {
+        labels: ["エネルギー(kcal)","タンパク質(g)","脂質(g)","炭水化物(g)","カルシウム(mg)","鉄(mg)","ビタミンＡ(μg)","ビタミンＢ１(mg)","ビタミンＢ２(mg)","ビタミンＣ(mg)","食物繊維(g)","飽和脂肪酸(mg)","塩分(g)"],
+        datasets: [{
+            label: '達成度(%)',
+            data: [105.66,91.67,150.94,150.94,70.00,158.78,50.00,76.92,85.71,88.24,20.00,70.59,35.71],
+            backgroundColor: 'rgba(255, 100, 100, 1)'
+        }]
+    };
+
+    var options = {
+        scales: {
+            xAxes: [{
+                ticks: {
+                    min: 0
+                }
+            }]
+        },
+        tooltips: {enabled: false
+        }
+    };
+
+    var chart = new Chart(ctx, {
+        type: 'horizontalBar',
+        data: data,
+        options: options,
+        plugins: labelplugin
+    });
+  </script>
+  <script>
+    var ctx = document.getElementById('ex_chart');
+    var labelplugin = {
+      afterDatasetsDraw: function (chart) {
+        // ラベルのフォントやサイズや、位置を指定する
+      }
+    }
+    var data = {
+        labels: ["エネルギー(kcal)","タンパク質(g)","脂質(g)","糖質(g)","食物繊維(g)","ナトリウム(mg)","カリウム(mg)","カルシウム(mg)","鉄(mg)","マグネシウム(mg)","リン(mg)","ビタミンＡ(μg)","ビタミンＢ１(mg)","ビタミンＢ２(mg)","ビタミンＢ６(mg)","ビタミンＢ１２(mg)","ナイアシン(mg)","パントテン酸(mg)","葉酸(μg)","ビタミンＣ(mg)","ビタミンＤ(μg)","ビタミンＥ(mg)"],
+        datasets: [{
+            label: '達成度(%)',
+            data: [105.66,,91.67,150.94,150.94,70.00,158.78,50.00,76.92,85.71,88.24,20.00,70.59,35.71,31.25,35.71,20.83,80.00,60.00,125.00,80.00,90.91,76.92],
+            datasets[
+              {backgroundColor: switch (data){
+case 0:
+	'rgba(131,185,206,1)'
+	break;
+default:
+	'rgba(246,133,124,0.5)'
+}
+}]
+}]
+}
+    ;
+
+
+    var options = {
+        scales: {
+            xAxes: [{
+                ticks: {
+                    min: 0
+                }
+            }]
+        },
+        tooltips: {enabled: false
+        }
+    };
+
+    var ex_chart = new Chart(ctx, {
+        type: 'horizontalBar',
+        data: data,
+        options: options,
+        plugins: labelplugin
+    });
+  </script>
+
 
 </body>
 
