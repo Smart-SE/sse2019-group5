@@ -87,16 +87,17 @@ PS G:\workplace\sse2019-group5> npm --version
 
 - id指定
 
-    - http://localhost:3001/ingregients/1
+    - http://localhost:3001/ingredients/1
 
-    - http://localhost:3001/ingregients/101
+    - http://localhost:3001/ingredients/101
 
         ![img](https://gyazo.com/c31d2360d44c589ea7355d1e627c0c12.png)
         
 
 - page指定
 
-    - http://localhost:3001/ingregients?_page=5&_limit=20
+    - http://localhost:3001/ingredients?_page=5&_limit=20
 
         ![img](https://gyazo.com/e09346a01a86a2af110ce9075b9c9bc0.png)
         
+
