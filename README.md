@@ -21,17 +21,23 @@
 |No| file          | desription                            |
 |--|---------------|---------------------------------------|
 | 1|README.md      |repos README.md                        |
-| 1|index.html     |NSApp用 初期画面                       |
-| 1|dashboard.html |NSApp用 初期画面（Indexと同じ）        |
-| 1|purchase.html  |NSApp用 確認・購買画面                 |
-| 1|history.html   |NSApp用 履歴確認画面                   |
-| 1|recommend.html |NSApp用 購入時のメニュー推奨画面       |
-| 1|login.html     |bootstrap template(未使用)             |
-| 1|404.html       |bootstrap template(未使用)             |
-| 1|forgot-password.html|bootstrap template(未使用)        |
-| 1|package.json   |node用package def                      |
-| 1|package-lock.json|node用package def                    |
-| 1|gulpfile.js    |gulpジョブ定義用                       |
+| 2|index.html     |NSApp用 初期画面                       |
+| 3|dashboard.html |NSApp用 初期画面（Indexと同じ）        |
+| 4|purchase.html  |NSApp用 確認・購買画面                 |
+| 5|history.html   |NSApp用 履歴確認画面                   |
+| 6|recommend.html |NSApp用 購入時のメニュー推奨画面       |
+| 7|login.html     |bootstrap template(未使用)             |
+| 8|404.html       |bootstrap template(未使用)             |
+| 9|forgot-password.html|bootstrap template(未使用)        |
+|10|package.json   |node用package def                      |
+|11|package-lock.json|node用package def                    |
+|12|gulpfile.js    |gulpジョブ定義用                       |
 
 
 
+### Installation
+
+- node.js & epress with bootstrap
+    - [./docs/1906-bootstrap-template-install.md](./docs/1906-bootstrap-template-install.md)
+- json-server
+    - [./docs/1907-json-server-installation.md](./docs/1907-json-server-installation.md)
