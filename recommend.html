@@ -815,50 +815,11 @@
 
           			<div class="modal-footer">
           				<button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
-          				<button type="button" class="btn btn-primary">ボタン</button>
+          				<button type="button" class="btn btn-primary">OK</button>
           			</div>
           		</div>
           	</div>
           </div>
-
-
-          <!-- モーダル用スクリプト -->
-            <script src="js/demo/chart-pie-demo.js"></script>
-
-          	<script>
-          		var ctx = document.getElementById('ex_chart');
-          		var labelplugin = {
-          		  afterDatasetsDraw: function (chart) {
-          		    // ラベルのフォントやサイズや、位置を指定する
-          		  }
-          		}
-          		var data = {
-          		    labels: ["エネルギー","水分","タンパク質","脂質","糖質","食物繊維","ナトリウム","カリウム","カルシウム","鉄","マグネシウム","リン","ビタミンＡ","ビタミンＢ１","ビタミンＢ２","ビタミンＢ0６","ビタミンＢ１２","ナイアシン","パントテン酸","葉酸","ビタミンＣ","ビタミンＤ","ビタミンＥ"],
-          		    datasets: [{
-          		        label: '含有量(%)',
-          		        data: [105.66,,91.67,150.94,150.94,70.00,158.78,50.00,76.92,85.71,88.24,20.00,70.59,35.71,31.25,35.71,20.83,80.00,60.00,125.00,80.00,90.91,76.92],
-          		        backgroundColor: 'rgba(255, 100, 100, 1)'
-          		    }]
-          		};
-          		var options = {
-          		    scales: {
-          		        xAxes: [{
-          		            ticks: {
-          		                min: 0
-          		            }
-          		        }]
-          		    },
-          		    tooltips: {enabled: false
-          		    }
-          		};
-          		var ex_chart = new Chart(ctx, {
-          		    type: 'horizontalBar',
-          		    data: data,
-          		    options: options,
-          		    plugins: labelplugin
-          		});
-          	</script>
-          <script src="./js/chart-sample.js"></script>
 
 
         </div>
@@ -923,6 +884,45 @@
   <!-- Page level custom scripts -->
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
+
+  <!-- モーダル用スクリプト -->
+  <script src="js/demo/chart-pie-demo.js"></script>
+
+	<script>
+		var ctx = document.getElementById('ex_chart');
+		var labelplugin = {
+		  afterDatasetsDraw: function (chart) {
+		    // ラベルのフォントやサイズや、位置を指定する
+		  }
+		}
+		var data = {
+		    labels: ["エネルギー","水分","タンパク質","脂質","糖質","食物繊維","ナトリウム","カリウム","カルシウム","鉄","マグネシウム","リン","ビタミンＡ","ビタミンＢ１","ビタミンＢ２","ビタミンＢ0６","ビタミンＢ１２","ナイアシン","パントテン酸","葉酸","ビタミンＣ","ビタミンＤ","ビタミンＥ"],
+		    datasets: [{
+		        label: '含有量(%)',
+		        data: [105.66,,91.67,150.94,150.94,70.00,158.78,50.00,76.92,85.71,88.24,20.00,70.59,35.71,31.25,35.71,20.83,80.00,60.00,125.00,80.00,90.91,76.92],
+		        backgroundColor: 'rgba(255, 100, 100, 1)'
+		    }]
+		};
+		var options = {
+		    scales: {
+		        xAxes: [{
+		            ticks: {
+		                min: 0
+		            }
+		        }]
+		    },
+		    tooltips: {enabled: false
+		    }
+		};
+		var ex_chart = new Chart(ctx, {
+		    type: 'horizontalBar',
+		    data: data,
+		    options: options,
+		    plugins: labelplugin
+		});
+	</script>
+  <script src="./js/chart-sample.js"></script>
+
 
 </body>
 
