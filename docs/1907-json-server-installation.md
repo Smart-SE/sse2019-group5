@@ -33,10 +33,10 @@ PS G:\workplace\sse2019-group5> npm --version
 
 ## Initial Execution
 
-- JSON Serverを、port 3001で起動
+- JSON Serverを、port 3004で起動
 
 ```
-(base) PS G:\workplace\sse2019-group5> json-server --watch db.json --port 3001
+(base) PS G:\workplace\sse2019-group5> json-server --watch db.json --port 3004
 
   \{^_^}/ hi!
 
@@ -47,9 +47,9 @@ PS G:\workplace\sse2019-group5> npm --version
   Done
 
   Resources
-  http://localhost:3000/posts
-  http://localhost:3000/comments
-  http://localhost:3000/profile
+  http://localhost:3004/posts
+  http://localhost:3004/comments
+  http://localhost:3004/profile
 
   Home
   http://localhost:3000
@@ -59,6 +59,7 @@ PS G:\workplace\sse2019-group5> npm --version
 ```
 
 - ブラウザでアクセス
+    - localhost:3004
 
 
 [![Image from Gyazo](https://i.gyazo.com/ef51fb543a5c0cc7b40e76200ea843c2.png)](https://gyazo.com/ef51fb543a5c0cc7b40e76200ea843c2)
@@ -87,16 +88,16 @@ PS G:\workplace\sse2019-group5> npm --version
 
 - id指定
 
-    - http://localhost:3001/ingredients/1
+    - http://localhost:3004/ingredients/1
 
-    - http://localhost:3001/ingredients/101
+    - http://localhost:3004/ingredients/101
 
         ![img](https://gyazo.com/c31d2360d44c589ea7355d1e627c0c12.png)
         
 
 - page指定
 
-    - http://localhost:3001/ingredients?_page=5&_limit=20
+    - http://localhost:3004/ingredients?_page=5&_limit=20
 
         ![img](https://gyazo.com/e09346a01a86a2af110ce9075b9c9bc0.png)
         
