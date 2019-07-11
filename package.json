@@ -3,7 +3,8 @@
     "name": "startbootstrap-sb-admin-2",
     "version": "4.0.6",
     "scripts": {
-        "start": "node_modules/.bin/gulp watch"
+        "start": "node_modules/.bin/gulp watch",
+        "format": "prettier --write *.js *.html js/**/*.js"
     },
     "description": "An open source Bootstrap 4 admin theme.",
     "keywords": [
@@ -50,6 +51,7 @@
         "gulp-rename": "1.4.0",
         "gulp-sass": "4.0.2",
         "gulp-uglify": "3.0.2",
-        "merge-stream": "2.0.0"
+        "merge-stream": "2.0.0",
+        "prettier": "^1.18.2"
     }
 }
