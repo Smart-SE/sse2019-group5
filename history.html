@@ -411,15 +411,16 @@
 // 初期値NULLの配列を定義。ここに、jsonファイルのvalue（今回は数値）に当たる部分が入る。
 // jsonファイルは、「his_ingre.json」という名前で同配下に格納
 var clab = [];
-$(function(){$.getJSON("http://localhost:3004/1", function(valance){
-  // 変数「valance」は、jsonのkey:valueの形をしている為、valueを取ってくるために「変数.key」
+$(function(){$.getJSON("http://localhost:3004/histories/1", function(balance){
+  // 変数「balance」は、jsonのkey:valueの形をしている為、valueを取ってくるために「変数.key」
   // でvalueを取る。
-clab.push(valance.energy,valance.protein,valance.lipid,valance.sugar,valance.dietary_fiber,valance.calcium,valance.iron,valance.magnesium,valance.rin,valance.calcium,valance.vitamin_a,
-valance.vitamin_b1,valance.vitamin_b2,valance.vitamin_b6,valance.vitamin_b12,valance.niacin,valance.pantothenic_acid,valance.folic_acid,valance.vitamin_c,valance.vitamin_d,valance.vitamin_e
+  
+clab.push(balance.energy,balance.protein,balance.lipid,balance.sugar,balance.dietary_fiber,balance.calcium,balance.iron,balance.magnesium,balance.rin,balance.calcium,balance.vitamin_a,
+balance.vitamin_b1,balance.vitamin_b2,balance.vitamin_b6,balance.vitamin_b12,balance.niacin,balance.pantothenic_acid,balance.folic_acid,balance.vitamin_c,balance.vitamin_d,balance.vitamin_e
 );
 
   // for(var i = 0; i < len; i++) {
-  //     clab.push(valance[i]);
+  //     clab.push(balance[i]);
 
       var options = {
          scales: {
@@ -459,13 +460,13 @@ valance.vitamin_b1,valance.vitamin_b2,valance.vitamin_b6,valance.vitamin_b12,val
    //   }
    // };
  var qq = [];
- $(function(){$.getJSON("http://localhost:3004/2", function(vlce){
+ $(function(){$.getJSON("http://localhost:3004/histories/2", function(vlce){
  qq.push(vlce.energy,vlce.protein,vlce.lipid,vlce.sugar,vlce.dietary_fiber,vlce.calcium,vlce.iron,vlce.magnesium,vlce.rin,vlce.calcium,vlce.vitamin_a,
  vlce.vitamin_b1,vlce.vitamin_b2,vlce.vitamin_b6,vlce.vitamin_b12,vlce.niacin,vlce.pantothenic_acid,vlce.folic_acid,vlce.vitamin_c,vlce.vitamin_d,vlce.vitamin_e
  );
 
    // for(var i = 0; i < len; i++) {
-   //     clab.push(valance[i]);
+   //     clab.push(balance[i]);
 
        var options = {
           scales: {
@@ -503,13 +504,13 @@ valance.vitamin_b1,valance.vitamin_b2,valance.vitamin_b6,valance.vitamin_b12,val
      //   }
      // };
      var fi = [];
-     $(function(){$.getJSON("http://localhost:3004/3", function(poince){
+     $(function(){$.getJSON("http://localhost:3004/histories/3", function(poince){
  fi.push(poince.energy,poince.protein,poince.lipid,poince.sugar,poince.dietary_fiber,poince.calcium,poince.iron,poince.magnesium,poince.rin,poince.calcium,poince.vitamin_a,
  poince.vitamin_b1,poince.vitamin_b2,poince.vitamin_b6,poince.vitamin_b12,poince.niacin,poince.pantothenic_acid,poince.folic_acid,poince.vitamin_c,poince.vitamin_d,poince.vitamin_e
      );
 
      // for(var i = 0; i < len; i++) {
-     //     clab.push(valance[i]);
+     //     clab.push(balance[i]);
 
          var options = {
             scales: {
