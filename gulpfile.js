@@ -12,6 +12,8 @@ const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const uglify = require("gulp-uglify");
+const babel = require("gulp-babel");
+require("babel-polyfill");
 
 // Load package.json for banner
 const pkg = require("./package.json");
@@ -73,6 +75,7 @@ function modules() {
   var jquery = gulp
     .src(["./node_modules/jquery/dist/*", "!./node_modules/jquery/dist/core.js"])
     .pipe(gulp.dest("./vendor/jquery"));
+  const babelPolyfill = gulp.src("./node_modules/babel-polyfill/dist/polyfill.min.js").pipe(gulp.dest("./vendor"));
   return merge(bootstrapJS, bootstrapSCSS, chartJS, dataTables, fontAwesome, jquery, jqueryEasing);
 }
 
@@ -114,6 +117,11 @@ function css() {
 function js() {
   return gulp
     .src(["./js/*.js", "!./js/*.min.js"])
+    .pipe(
+      babel({
+        presets: ["@babel/preset-env"]
+      })
+    )
     .pipe(uglify())
     .pipe(
       header(banner, {

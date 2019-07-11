@@ -375,53 +375,42 @@
                       <th>金額</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>2019年6月21日(土) コースA</td>
-                      <td>￥800</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>2019年6月22日(日) コースB</td>
-                      <td>￥800</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>2019年6月23日(月) コースC</td>
-                      <td>￥800</td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td>2019年6月24日(火) コースB</td>
-                      <td>￥800</td>
-                    </tr>
-                    <tr>
-                      <td>5</td>
-                      <td>2019年6月25日(水) コースA</td>
-                      <td>￥800</td>
-                    </tr>
-                    <tr>
-                      <td>6</td>
-                      <td>2019年6月26日(木) コースB</td>
-                      <td>￥800</td>
-                    </tr>
-                    <tr>
-                      <td>7</td>
-                      <td>2019年6月27日(金) コースA</td>
-                      <td>￥800</td>
-                    </tr>
-                  </tbody>
+                  <tbody id="order-course-table-body"></tbody>
                 </table>
               </div>
             </center>
 
             <center>
-              <input type="button" class="btn btn-primary btn-lg" value="戻る" />
-              <input type="submit" class="btn btn-primary btn-lg" value="発注" />
+              <input id="button-back" type="button" class="btn btn-primary btn-lg" value="戻る" />
+              <input id="button-order" type="submit" class="btn btn-primary btn-lg" value="発注" />
             </center>
-
-            <!-- ↑↑↑↑ これより下のdivを変更 -->
+            <!-- 発注ダイアログ -->
+            <div
+              class="modal fade"
+              id="order-modal"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="label1"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="label1"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    発注しました。
+                  </div>
+                  <div class="modal-footer">
+                    <button id="button-order-ok" type="button" class="btn btn-primary">OK</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ↑↑↑↑ これより上のdivを変更 -->
           </div>
           <!-- /.container-fluid -->
         </div>
@@ -482,11 +471,7 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="vendor/polyfill.min.js"></script>
+    <script src="js/purchase.min.js"></script>
   </body>
 </html>

@@ -1,5 +1,4 @@
 node_modules
 /css/
 /vendor/
-/js/chart-sample.min.js
-/js/sb-admin-2.min.js
+/js/*.min.js
