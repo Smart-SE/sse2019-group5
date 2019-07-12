@@ -363,52 +363,38 @@
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
               <h1 class="h3 mb-0 text-gray-800">発注ページ</h1>
             </div>
-
-            <!-- table -->
-            <center>
-              <div class="container">
-                <table class="table">
-                  <thead class="thead-light">
-                    <tr>
-                      <th>No.</th>
-                      <th>発注項目</th>
-                      <th>金額</th>
-                    </tr>
-                  </thead>
-                  <tbody id="order-course-table-body"></tbody>
-                </table>
-              </div>
-            </center>
-
-            <center>
-              <input id="button-back" type="button" class="btn btn-primary btn-lg" value="戻る" />
-              <input id="button-order" type="submit" class="btn btn-primary btn-lg" value="発注" />
-            </center>
-            <!-- 発注ダイアログ -->
-            <div
-              class="modal fade"
-              id="order-modal"
-              tabindex="-1"
-              role="dialog"
-              aria-labelledby="label1"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="label1"></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    発注しました。
-                  </div>
-                  <div class="modal-footer">
-                    <button id="button-order-ok" type="button" class="btn btn-primary">OK</button>
+            
+            <div class="col-lg-12 mb-4">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-8">
+                        <p>発注内容を確認の上、「発注」ボタンをクリックしてください。</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <!-- table -->
+                <center>
+                  <div class="container">
+                    <table class="table">
+                      <thead class="thead-light">
+                        <tr>
+                          <th>No.</th>
+                          <th>発注項目</th>
+                          <th>金額</th>
+                        </tr>
+                      </thead>
+                      <tbody id="order-course-table-body" class="thead-light"></tbody>
+                    </table>
+                  </div>
+                </center>
               </div>
+              <center>
+                  <input id="button-back" type="button" class="btn btn-primary btn-lg" value="戻る" />
+                  <input id="button-order" type="submit" class="btn btn-primary btn-lg" value="発注" />
+              </center>
             </div>
             <!-- ↑↑↑↑ これより上のdivを変更 -->
           </div>
@@ -420,7 +406,7 @@
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Your Website 2019</span>
+              <span>Copyright &copy; sse 2019 NS Apps</span>
             </div>
           </div>
         </footer>
@@ -456,6 +442,33 @@
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
             <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 発注用モーダル・ダイアログ -->
+    <div
+      class="modal fade"
+      id="order-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="label1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="label1"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            発注しました。
+          </div>
+          <div class="modal-footer">
+            <button id="button-order-ok" type="button" class="btn btn-primary">OK</button>
           </div>
         </div>
       </div>

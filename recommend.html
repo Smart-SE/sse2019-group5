@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="css/sb-admin-2.css" rel="stylesheet">
 
 </head>
 
@@ -295,6 +295,11 @@
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <p>1週間のおすすめメニューです。よろしければ発注確認ボタンをクリックしてください。</p>
           </div>
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <center>
+            <a class="btn btn-primary btn-lg" href="purchase.html" role="button">発注確認</a>
+            </center>
+          </div>
 
           <div class="row">  
 
@@ -305,522 +310,631 @@
                 <div class="card-header py-3">
                  <div class="container-fluid">
                    <div class="row">
-                    <div class="col-1">
-                    </div>
-                    <div class="col-8">
-                      <label for="day1" class="m-0 font-weight-bold text-primary" >2019年6月21日(土) コースA</label>
-                    </div>
-                    <div class="col-2">
+                    <div class="col-1"></div>
+                    <div class="col-7">
+                      <label for="day1" class="m-0 font-weight-bold text-primary">14/07/2019 コース04</label>
                     </div>
                     <div class="col-1">
-                       <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
+                      <button type='button' id='btn_course' class="btn btn-success btn-sm" data-button="1" data-toggle="modal" data-target="#courseDialog" style="width:120px; color:#fff; text-align: center;"> コースの栄養</button>
                     </div>
                    </div>
                  </div>
                 </div>
+                
+                <div class="container">
+                  <table class="table">
+                     <thead class="thead-light">
+                       <tr>
+                         <th>No.</th>
+                         <th>区分</th>
+                         <th>品目</th>
+                         <th align="right">金額</th>
+                         <th>-</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       <tr>
+                         <td>1</td>
+                         <td> 朝食</td>
+                         <td> ロースかつ丼 ライス普通盛 弁当 885kcal</td>
+                         <td align="right">￥1100</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu1' data-toggle="modal" data-button="61" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>2</td>
+                         <td> 昼食</td>
+                         <td> 特から揚弁当(6コ入り) ライス小盛 弁当 804kcal</td>
+                         <td align="right">￥1100</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu2' data-toggle="modal" data-button="68" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>3</td>
+                         <td> 夕食</td>
+                         <td> 4種のこぼれチーズハンバーグステーキ弁当 ライス小盛 弁当 775kcal</td>
+                         <td align="right">￥1000</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu3' data-toggle="modal" data-button="83" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                     </tbody>
+                  </table>
+                    
+                  <div class="container-fluid">
+                    <div class="row">
+                     <div class="col-7"></div>
+                     <div class="col-1">合計</div>
+                     <div class="col-3">￥2,700</div>
+                    </div>
+                  </div>
+                </div>
+              <!-- end of Day1 -->
+              </div>
 
-             <div class="container">
- 		 <table class="table">
-		    <thead class="thead-light">
-		      <tr>
-                        <th>No.</th>
-                        <th>品目</th>
-		        <th>金額</th>
-		        <th></th>
-		      </tr>
-		    </thead>
-		    <tbody>
-		      <tr>
-		        <td>1</td>
-		        <td> カレーセット</td>
-		        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-		      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td> 唐揚げ弁当</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td> ハンバーグ弁当</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-		    </tbody>
-		  </table>
-
+              <!-- Day1 -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
                  <div class="container-fluid">
                    <div class="row">
-                    <div class="col-8"></div>
-                    <div class="col-2">合計</div>
-                    <div class="col-2">￥2,400</div>
+                    <div class="col-1"></div>
+                    <div class="col-7">
+                      <label for="day1" class="m-0 font-weight-bold text-primary">14/07/2019 コース04</label>
+                    </div>
+                    <div class="col-1">
+                      <button type='button' id='btn_course' class="btn btn-success btn-sm" data-button="1" data-toggle="modal" data-target="#courseDialog" style="width:120px; color:#fff; text-align: center;"> コースの栄養</button>
+                    </div>
                    </div>
                  </div>
-
-		</div>
                 </div>
+                
+                <div class="container">
+                  <table class="table">
+                     <thead class="thead-light">
+                       <tr>
+                         <th>No.</th>
+                         <th>区分</th>
+                         <th>品目</th>
+                         <th align="right">金額</th>
+                         <th>-</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       <tr>
+                         <td>1</td>
+                         <td> 朝食</td>
+                         <td> ロースかつ丼 ライス普通盛 弁当 885kcal</td>
+                         <td align="right">￥1100</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu1' data-toggle="modal" data-button="61" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>2</td>
+                         <td> 昼食</td>
+                         <td> 特から揚弁当(6コ入り) ライス小盛 弁当 804kcal</td>
+                         <td align="right">￥1100</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu2' data-toggle="modal" data-button="68" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>3</td>
+                         <td> 夕食</td>
+                         <td> 4種のこぼれチーズハンバーグステーキ弁当 ライス小盛 弁当 775kcal</td>
+                         <td align="right">￥1000</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu3' data-toggle="modal" data-button="83" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                     </tbody>
+                  </table>
+                    
+                  <div class="container-fluid">
+                    <div class="row">
+                     <div class="col-7"></div>
+                     <div class="col-1">合計</div>
+                     <div class="col-3">￥2,700</div>
+                    </div>
+                  </div>
+                </div>
+              <!-- end of Day1 -->
+              </div>
 
+              <!-- Day1 -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                 <div class="container-fluid">
+                   <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-7">
+                      <label for="day1" class="m-0 font-weight-bold text-primary">14/07/2019 コース04</label>
+                    </div>
+                    <div class="col-1">
+                      <button type='button' id='btn_course' class="btn btn-success btn-sm" data-button="1" data-toggle="modal" data-target="#courseDialog" style="width:120px; color:#fff; text-align: center;"> コースの栄養</button>
+                    </div>
+                   </div>
+                 </div>
+                </div>
+                
+                <div class="container">
+                  <table class="table">
+                     <thead class="thead-light">
+                       <tr>
+                         <th>No.</th>
+                         <th>区分</th>
+                         <th>品目</th>
+                         <th align="right">金額</th>
+                         <th>-</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       <tr>
+                         <td>1</td>
+                         <td> 朝食</td>
+                         <td> ロースかつ丼 ライス普通盛 弁当 885kcal</td>
+                         <td align="right">￥1100</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu1' data-toggle="modal" data-button="61" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>2</td>
+                         <td> 昼食</td>
+                         <td> 特から揚弁当(6コ入り) ライス小盛 弁当 804kcal</td>
+                         <td align="right">￥1100</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu2' data-toggle="modal" data-button="68" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>3</td>
+                         <td> 夕食</td>
+                         <td> 4種のこぼれチーズハンバーグステーキ弁当 ライス小盛 弁当 775kcal</td>
+                         <td align="right">￥1000</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu3' data-toggle="modal" data-button="83" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                     </tbody>
+                  </table>
+                    
+                  <div class="container-fluid">
+                    <div class="row">
+                     <div class="col-7"></div>
+                     <div class="col-1">合計</div>
+                     <div class="col-3">￥2,700</div>
+                    </div>
+                  </div>
+                </div>
+              <!-- end of Day1 -->
+              </div>
 
               <!-- Day2 -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
                  <div class="container-fluid">
                    <div class="row">
-                    <div class="col-1">
-                    </div>
-                    <div class="col-8">
-                      <label for="day2" class="m-0 font-weight-bold text-primary" >2019年6月22日(日) コースB</label>
-                    </div>
-                    <div class="col-2">
+                    <div class="col-1"></div>
+                    <div class="col-7">
+                      <label for="day2" class="m-0 font-weight-bold text-primary">15/07/2019 コース18</label>
                     </div>
                     <div class="col-1">
-                      <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
+                      <button type='button' id='btn_course' class="btn btn-success btn-sm" data-button="1" data-toggle="modal" data-target="#courseDialog" style="width:120px; color:#fff; text-align: center;"> コースの栄養</button>
                     </div>
                    </div>
                  </div>
                 </div>
-
-             <div class="container">
-                 <table class="table">
-                    <thead class="thead-light">
-                      <tr>
-                        <th>No.</th>
-                        <th>品目</th>
-                        <th>金額</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td> カレーセット</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td> 唐揚げ弁当</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td> ハンバーグ弁当</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-                    </tbody>
+                
+                <div class="container">
+                  <table class="table">
+                     <thead class="thead-light">
+                       <tr>
+                         <th>No.</th>
+                         <th>区分</th>
+                         <th>品目</th>
+                         <th align="right">金額</th>
+                         <th>-</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       <tr>
+                         <td>1</td>
+                         <td> 朝食</td>
+                         <td> 和風おろしハンバーグステーキ弁当 ライス小盛 野菜増 668kcal</td>
+                         <td align="right">￥1000</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu1' data-toggle="modal" data-button="42" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>2</td>
+                         <td> 昼食</td>
+                         <td> 和風おろしハンバーグステーキ弁当 ライス小盛 弁当 653kcal</td>
+                         <td align="right">￥800</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu2' data-toggle="modal" data-button="86" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>3</td>
+                         <td> 夕食</td>
+                         <td> 肉増しビビンバ(半熟たまご付き) ライス大盛 野菜増 1190kcal</td>
+                         <td align="right">￥900</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu3' data-toggle="modal" data-button="46" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                     </tbody>
                   </table>
-
-                 <div class="container-fluid">
-                   <div class="row">
-                    <div class="col-8"></div>
-                    <div class="col-2">合計</div>
-                    <div class="col-2">￥2,400</div>
-                   </div>
-                 </div>
-
+                    
+                  <div class="container-fluid">
+                    <div class="row">
+                     <div class="col-7"></div>
+                     <div class="col-1">合計</div>
+                     <div class="col-3">￥2,700</div>
+                    </div>
+                  </div>
                 </div>
-                </div>
-
+              <!-- end of Day2 -->
+              </div>
 
               <!-- Day3 -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
                  <div class="container-fluid">
                    <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-7">
+                      <label for="day3" class="m-0 font-weight-bold text-primary">16/07/2019 コース25</label>
+                    </div>
                     <div class="col-1">
-                    </div>
-                    <div class="col-8">
-                      <label for="day3" class="m-0 font-weight-bold text-primary" >2019年6月23日(月) コースC</label>
-                    </div>
-                    <div class="col-1">
-                    </div>
-                    <div class="col-2">
-                      <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
+                      <button type='button' id='btn_course' class="btn btn-success btn-sm" data-button="1" data-toggle="modal" data-target="#courseDialog" style="width:120px; color:#fff; text-align: center;"> コースの栄養</button>
                     </div>
                    </div>
                  </div>
                 </div>
-
-
-             <div class="container">
-                 <table class="table">
-                    <thead class="thead-light">
-                      <tr>
-                        <th>No.</th>
-                        <th>品目</th>
-                        <th>金額</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td> カレーセット</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td> 唐揚げ弁当</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td> ハンバーグ弁当</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-                    </tbody>
+                
+                <div class="container">
+                  <table class="table">
+                     <thead class="thead-light">
+                       <tr>
+                         <th>No.</th>
+                         <th>区分</th>
+                         <th>品目</th>
+                         <th align="right">金額</th>
+                         <th>-</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       <tr>
+                         <td>1</td>
+                         <td> 朝食</td>
+                         <td> ちくわ天 小物 52kcal</td>
+                         <td align="right">￥500</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu1' data-toggle="modal" data-button="186" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>2</td>
+                         <td> 昼食</td>
+                         <td> 5種の野菜みそ汁 単品 39kcal</td>
+                         <td align="right">￥500</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu2' data-toggle="modal" data-button="194" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>3</td>
+                         <td> 夕食</td>
+                         <td> ＢＩＧのり弁（コロッケ） ライス大盛 弁当 1273kcal</td>
+                         <td align="right">￥1100</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu3' data-toggle="modal" data-button="129" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                     </tbody>
                   </table>
-
-                 <div class="container-fluid">
-                   <div class="row">
-                    <div class="col-8"></div>
-                    <div class="col-2">合計</div>
-                    <div class="col-2">￥2,400</div>
-                   </div>
-                 </div>
-
+                    
+                  <div class="container-fluid">
+                    <div class="row">
+                     <div class="col-7"></div>
+                     <div class="col-1">合計</div>
+                     <div class="col-3">￥2,100</div>
+                    </div>
+                  </div>
                 </div>
-                </div>
-
+              <!-- end of Day3 -->
+              </div>
 
               <!-- Day4 -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
                  <div class="container-fluid">
                    <div class="row">
-                    <div class="col-1">
-                    </div>
-                    <div class="col-8">
-                      <label for="day4" class="m-0 font-weight-bold text-primary" >2019年6月24日(火) コースB</label>
-                    </div>
-                    <div class="col-2">
+                    <div class="col-1"></div>
+                    <div class="col-7">
+                      <label for="day4" class="m-0 font-weight-bold text-primary">17/07/2019 コース20</label>
                     </div>
                     <div class="col-1">
-                      <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
+                      <button type='button' id='btn_course' class="btn btn-success btn-sm" data-button="1" data-toggle="modal" data-target="#courseDialog" style="width:120px; color:#fff; text-align: center;"> コースの栄養</button>
                     </div>
                    </div>
                  </div>
                 </div>
-
-
-             <div class="container">
-                 <table class="table">
-                    <thead class="thead-light">
-                      <tr>
-                        <th>No.</th>
-                        <th>品目</th>
-                        <th>金額</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td> カレーセット</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td> 唐揚げ弁当</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td> ハンバーグ弁当</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-                    </tbody>
+                
+                <div class="container">
+                  <table class="table">
+                     <thead class="thead-light">
+                       <tr>
+                         <th>No.</th>
+                         <th>区分</th>
+                         <th>品目</th>
+                         <th align="right">金額</th>
+                         <th>-</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       <tr>
+                         <td>1</td>
+                         <td> 朝食</td>
+                         <td> から揚おかずのみ（4コ入り） 小物 387kcal</td>
+                         <td align="right">￥1100</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu1' data-toggle="modal" data-button="134" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>2</td>
+                         <td> 昼食</td>
+                         <td> しゃけ塩焼き弁当 ライス普通盛 野菜増 746kcal</td>
+                         <td align="right">￥1100</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu2' data-toggle="modal" data-button="25" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>3</td>
+                         <td> 夕食</td>
+                         <td> Wうな重 ライス普通盛 丼ぶり 975kcal</td>
+                         <td align="right">￥1200</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu3' data-toggle="modal" data-button="55" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                     </tbody>
                   </table>
-
-                 <div class="container-fluid">
-                   <div class="row">
-                    <div class="col-8"></div>
-                    <div class="col-2">合計</div>
-                    <div class="col-2">￥2,400</div>
-                   </div>
-                 </div>
-
+                    
+                  <div class="container-fluid">
+                    <div class="row">
+                     <div class="col-7"></div>
+                     <div class="col-1">合計</div>
+                     <div class="col-3">￥3,400</div>
+                    </div>
+                  </div>
                 </div>
-                </div>
-
+              <!-- end of Day4 -->
+              </div>
 
               <!-- Day5 -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
                  <div class="container-fluid">
                    <div class="row">
-                    <div class="col-1">
-                    </div>
-                    <div class="col-8">
-                      <label for="day5" class="m-0 font-weight-bold text-primary" >2019年6月25日(水) コースA</label>
-                    </div>
-                    <div class="col-2">
+                    <div class="col-1"></div>
+                    <div class="col-7">
+                      <label for="day5" class="m-0 font-weight-bold text-primary">18/07/2019 コース13</label>
                     </div>
                     <div class="col-1">
-                      <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
+                      <button type='button' id='btn_course' class="btn btn-success btn-sm" data-button="1" data-toggle="modal" data-target="#courseDialog" style="width:120px; color:#fff; text-align: center;"> コースの栄養</button>
                     </div>
                    </div>
                  </div>
                 </div>
-
-
-             <div class="container">
-                 <table class="table">
-                    <thead class="thead-light">
-                      <tr>
-                        <th>No.</th>
-                        <th>品目</th>
-                        <th>金額</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td> カレーセット</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td> 唐揚げ弁当</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td> ハンバーグ弁当</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-                    </tbody>
+                
+                <div class="container">
+                  <table class="table">
+                     <thead class="thead-light">
+                       <tr>
+                         <th>No.</th>
+                         <th>区分</th>
+                         <th>品目</th>
+                         <th align="right">金額</th>
+                         <th>-</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       <tr>
+                         <td>1</td>
+                         <td> 朝食</td>
+                         <td> ミニうどん（きつね） 小物 123kcal</td>
+                         <td align="right">￥700</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu1' data-toggle="modal" data-button="170" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>2</td>
+                         <td> 昼食</td>
+                         <td> デミグラスハンバーグステーキ弁当 ライス普通盛 野菜増 779kcal</td>
+                         <td align="right">￥500</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu2' data-toggle="modal" data-button="37" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>3</td>
+                         <td> 夕食</td>
+                         <td> から揚弁当(4コ入り) ライス大盛 野菜増 916kcal</td>
+                         <td align="right">￥700</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu3' data-toggle="modal" data-button="2" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                     </tbody>
                   </table>
-
-                 <div class="container-fluid">
-                   <div class="row">
-                    <div class="col-8"></div>
-                    <div class="col-2">合計</div>
-                    <div class="col-2">￥2,400</div>
-                   </div>
-                 </div>
-
+                    
+                  <div class="container-fluid">
+                    <div class="row">
+                     <div class="col-7"></div>
+                     <div class="col-1">合計</div>
+                     <div class="col-3">￥1,900</div>
+                    </div>
+                  </div>
                 </div>
-                </div>
-
+              <!-- end of Day5 -->
+              </div>
 
               <!-- Day6 -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
                  <div class="container-fluid">
                    <div class="row">
-                    <div class="col-1">
-                    </div>
-                    <div class="col-8">
-                      <label for="day6" class="m-0 font-weight-bold text-primary" >2019年6月26日(木) コースB</label>
-                    </div>
-                    <div class="col-2">
+                    <div class="col-1"></div>
+                    <div class="col-7">
+                      <label for="day6" class="m-0 font-weight-bold text-primary">19/07/2019 コース21</label>
                     </div>
                     <div class="col-1">
-                      <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
+                      <button type='button' id='btn_course' class="btn btn-success btn-sm" data-button="1" data-toggle="modal" data-target="#courseDialog" style="width:120px; color:#fff; text-align: center;"> コースの栄養</button>
                     </div>
                    </div>
                  </div>
                 </div>
-
-
-             <div class="container">
-                 <table class="table">
-                    <thead class="thead-light">
-                      <tr>
-                        <th>No.</th>
-                        <th>品目</th>
-                        <th>金額</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td> カレーセット</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td> 唐揚げ弁当</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td> ハンバーグ弁当</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-                    </tbody>
+                
+                <div class="container">
+                  <table class="table">
+                     <thead class="thead-light">
+                       <tr>
+                         <th>No.</th>
+                         <th>区分</th>
+                         <th>品目</th>
+                         <th align="right">金額</th>
+                         <th>-</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       <tr>
+                         <td>1</td>
+                         <td> 朝食</td>
+                         <td> チキンバスケット(10コ入り) 小物 802kcal</td>
+                         <td align="right">￥500</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu1' data-toggle="modal" data-button="171" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>2</td>
+                         <td> 昼食</td>
+                         <td> スパサラダ 単品 125kcal</td>
+                         <td align="right">￥700</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu2' data-toggle="modal" data-button="187" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>3</td>
+                         <td> 夕食</td>
+                         <td> 惣菜：キンピラゴボウ 単品 53kcal</td>
+                         <td align="right">￥800</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu3' data-toggle="modal" data-button="177" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                     </tbody>
                   </table>
-
-                 <div class="container-fluid">
-                   <div class="row">
-                    <div class="col-8"></div>
-                    <div class="col-2">合計</div>
-                    <div class="col-2">￥2,400</div>
-                   </div>
-                 </div>
-
+                    
+                  <div class="container-fluid">
+                    <div class="row">
+                     <div class="col-7"></div>
+                     <div class="col-1">合計</div>
+                     <div class="col-3">￥2,000</div>
+                    </div>
+                  </div>
                 </div>
-                </div>
-
+              <!-- end of Day6 -->
+              </div>
 
               <!-- Day7 -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
                  <div class="container-fluid">
                    <div class="row">
-                    <div class="col-1">
-                    </div>
-                    <div class="col-8">
-                      <label for="day7" class="m-0 font-weight-bold text-primary" >2019年6月27日(金) コースA</label>
-                    </div>
-                    <div class="col-2">
+                    <div class="col-1"></div>
+                    <div class="col-7">
+                      <label for="day7" class="m-0 font-weight-bold text-primary">20/07/2019 コース28</label>
                     </div>
                     <div class="col-1">
-                      <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
+                      <button type='button' id='btn_course' class="btn btn-success btn-sm" data-button="1" data-toggle="modal" data-target="#courseDialog" style="width:120px; color:#fff; text-align: center;"> コースの栄養</button>
                     </div>
                    </div>
                  </div>
                 </div>
-
-
-             <div class="container">
-                 <table class="table">
-                    <thead class="thead-light">
-                      <tr>
-                        <th>No.</th>
-                        <th>品目</th>
-                        <th>金額</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td> カレーセット</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td> 唐揚げ弁当</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td> ハンバーグ弁当</td>
-                        <td>￥800</td>
-                        <td>
-                          <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#courseDialog" style="width:60px">栄養</a>
-                        </td>
-                      </tr>
-                    </tbody>
+                
+                <div class="container">
+                  <table class="table">
+                     <thead class="thead-light">
+                       <tr>
+                         <th>No.</th>
+                         <th>区分</th>
+                         <th>品目</th>
+                         <th align="right">金額</th>
+                         <th>-</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       <tr>
+                         <td>1</td>
+                         <td> 朝食</td>
+                         <td> おろしチキン竜田弁当（香味醤油） ライス普通盛 野菜増 879kcal</td>
+                         <td align="right">￥1000</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu1' data-toggle="modal" data-button="19" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>2</td>
+                         <td> 昼食</td>
+                         <td> 烏龍茶500ml 飲み物 0kcal</td>
+                         <td align="right">￥500</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu2' data-toggle="modal" data-button="199" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td>3</td>
+                         <td> 夕食</td>
+                         <td> 特のりタル弁当 ライス大盛 弁当 1053kcal</td>
+                         <td align="right">￥600</td>
+                         <td>
+                           <a class="btn btn-info btn-sm" id='btn_menu3' data-toggle="modal" data-button="60" data-target="#ingredientDialog" style="width:60px; color:#fff">栄養</a>
+                         </td>
+                       </tr>
+                     </tbody>
                   </table>
-
-                 <div class="container-fluid">
-                   <div class="row">
-                    <div class="col-8"></div>
-                    <div class="col-2">合計</div>
-                    <div class="col-2">￥2,400</div>
-                   </div>
-                 </div>
-
+                    
+                  <div class="container-fluid">
+                    <div class="row">
+                     <div class="col-7"></div>
+                     <div class="col-1">合計</div>
+                     <div class="col-3">￥2,100</div>
+                    </div>
+                  </div>
                 </div>
-                </div>
-
-
+              <!-- end of Day7 -->
+              </div>
 
             <!-- conform -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <center>
-              <a class="btn btn-primary btn-lg" href="purchase.html" role="button">発注確認</a>
+            <a class="btn btn-primary btn-lg" href="purchase.html" role="button">発注確認</a>
             </center>
-
-
-          <!-- ↑↑↑↑ これより下のdivを変更 -->
-
-          <!-- モーダルダイアログの定義 -->
-          <div class="modal fade" id="courseDialog" tabindex="-1">
-          	<div class="modal-dialog">
-          		<div class="modal-content">
-          			<div class="modal-header">
-          				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-          				<h4 class="modal-title">タイトル</h4>
-          			</div>
-          			<!-- contents body -->
-          			<div>
-          				<a href=""><< 前へ</a>  <a href="">次へ>></a>
-          				<div>
-          					<canvas id="ex_chart" height="500" width="500"></canvas>
-          				</div>
-          			</div>
-
-          			<div class="modal-footer">
-          				<button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
-          				<button type="button" class="btn btn-primary">OK</button>
-          			</div>
-          		</div>
-          	</div>
           </div>
 
+
+          <!-- ↑↑↑↑ これより上のdivを変更 -->
 
         </div>
         <!-- /.container-fluid -->
@@ -832,7 +946,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
+            <span>Copyright &copy; sse 2019 NS Apps</span>
           </div>
         </div>
       </footer>
@@ -868,6 +982,52 @@
     </div>
   </div>
 
+  <!-- モーダルダイアログの定義（コース） -->
+  <div class="modal fade" id="courseDialog" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">コースの栄養素</h4>
+                <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+            </div>
+            <!-- contents body -->
+            <div>
+              <canvas id="course_chart" height="500" width="500"></canvas>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- モーダルダイアログの定義（品目） -->
+  <div class="modal fade" id="ingredientDialog" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">品目の栄養素</h4>
+                <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+            </div>
+            <!-- contents body -->
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-3"><a href="#">＜＜ 前へ</a></div>
+                <div class="col-6"></div>
+                <div class="col-3"><a href="#">次へ＞＞</a></div>
+              </div>
+            </div>
+            <div>
+              <canvas id="ingredient_chart" height="500" width="500"></canvas>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -881,48 +1041,9 @@
   <!-- Page level plugins -->
   <script src="vendor/chart.js/Chart.min.js"></script>
 
-  <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
 
   <!-- モーダル用スクリプト -->
-  <script src="js/demo/chart-pie-demo.js"></script>
-
-	<script>
-		var ctx = document.getElementById('ex_chart');
-		var labelplugin = {
-		  afterDatasetsDraw: function (chart) {
-		    // ラベルのフォントやサイズや、位置を指定する
-		  }
-		}
-		var data = {
-		    labels: ["エネルギー","水分","タンパク質","脂質","糖質","食物繊維","ナトリウム","カリウム","カルシウム","鉄","マグネシウム","リン","ビタミンＡ","ビタミンＢ１","ビタミンＢ２","ビタミンＢ0６","ビタミンＢ１２","ナイアシン","パントテン酸","葉酸","ビタミンＣ","ビタミンＤ","ビタミンＥ"],
-		    datasets: [{
-		        label: '含有量(%)',
-		        data: [105.66,,91.67,150.94,150.94,70.00,158.78,50.00,76.92,85.71,88.24,20.00,70.59,35.71,31.25,35.71,20.83,80.00,60.00,125.00,80.00,90.91,76.92],
-		        backgroundColor: 'rgba(255, 100, 100, 1)'
-		    }]
-		};
-		var options = {
-		    scales: {
-		        xAxes: [{
-		            ticks: {
-		                min: 0
-		            }
-		        }]
-		    },
-		    tooltips: {enabled: false
-		    }
-		};
-		var ex_chart = new Chart(ctx, {
-		    type: 'horizontalBar',
-		    data: data,
-		    options: options,
-		    plugins: labelplugin
-		});
-	</script>
-  <script src="./js/chart-sample.js"></script>
-
+  <script src="js/detail.js"></script>
 
 </body>
 

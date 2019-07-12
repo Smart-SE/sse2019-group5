@@ -36,7 +36,7 @@ function executeGetPurchases() {
       console.log("purchases timeout!!");
       reject();
     };
-    xhr.open("GET", "http://localhost:3004/purchases?_page=1&_limit=7");
+    xhr.open("GET", "http://localhost:3004/purchases?_page=2&_limit=7");
     xhr.send();
   });
 }

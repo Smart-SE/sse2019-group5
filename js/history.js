@@ -42,7 +42,7 @@ function display_bar(url_path, cvs, bgcolor){
 
 const LABEL_LST = ["エネルギー(kcal)", "タンパク質(g)", "脂質(g)", "糖質(g)", "食物繊維(g)", "カリウム(mg)", "カルシウム(mg)", "鉄(mg)", "マグネシウム(mg)", "リン(mg)", "ビタミンＡ(μg)", "ビタミンＢ１(mg)", "ビタミンＢ２(mg)", "ビタミンＢ６(mg)", "ビタミンＢ１２(mg)", "ナイアシン(mg)", "パントテン酸(mg)", "葉酸(μg)", "ビタミンＣ(mg)", "ビタミンＤ(μg)", "ビタミンＥ(mg)"]
 const DATA_LABEL_NAME = '達成度(%)'
-const BG_COLOR = ['red', 'royalblue', 'teal']
+const BG_COLOR = ['red', 'teal', 'royalblue']
 const CONS_URI = "http://localhost:3004/"
 const CONS_PATH = "histories/"
 var uri_path = CONS_URI + CONS_PATH
