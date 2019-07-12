@@ -61,7 +61,20 @@ function display_bar(url_path, cvs, data_label_id, bgcolor){
 //--------------------------------------------------
 // event litenter
 
-const BG_COLOR = ['red', 'teal', 'royalblue']
+const BG_COLOR = ['royalblue', 'red', 'teal']
+
+$('#btn_weekly').on('click', function() {
+    const CONS_URI = "http://localhost:3004/"
+    const CONS_PATH = "histories/"
+    var uri_path = CONS_URI + CONS_PATH
+    var btn = $(event.relatedTarget);
+    console.log(btn);
+    var course_id = btn.data('button'); // bottonの値を引き継げない！！
+    console.log("clicked with "+ course_id);
+    course_id = 1
+    display_bar(url_path=uri_path + course_id, cnv='#weekly_chart', data_label_id=0,bgcolor=BG_COLOR[0]);
+});
+
 
 $('#btn_course').on('click', function() {
     const CONS_URI = "http://localhost:3004/"
