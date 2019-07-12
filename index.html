@@ -303,12 +303,9 @@
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">最近１週間の栄養バランス</h6>
-                  <!-- <h6 class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sampleModal">
-                  詳細へ
-                  </h6> -->
                 </div>
-				      	<canvas id="chart" height="500" width="500"></canvas>
-            　</div>
+                <canvas id="chart" height="500" width="500"></canvas>
+              </div>
             </div>
 
             <div class="col-lg-6 mb-4">
@@ -318,14 +315,7 @@
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">週前半</h6>
                 </div>
-                <!-- <div class="card-body">
-                  <div class="text-center">
-                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="img/undraw_posting_photo.svg" alt="">
-                  </div> -->
-                  <!-- <p>もう少しバランスよく食べましょう！</p>
-                  <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on unDraw &rarr;</a>
-                </div> -->
-                	<canvas id="chart_sub1" height="100" width="100"></canvas>
+                <canvas id="chart_sub1" height="100" width="100"></canvas>
               </div>
 
               <!-- Approach -->
@@ -333,11 +323,7 @@
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">週後半</h6>
                 </div>
-                <!-- <div class="card-body">
-                  <p>食物繊維は、・・・・・・</p>
-                  <p class="mb-0">Before working with this theme, you should become familiar with the Bootstrap framework, especially the utility classes.</p>
-                </div> -->
-                	<canvas id="chart_sub2" height="100" width="100"></canvas>
+                <canvas id="chart_sub2" height="100" width="100"></canvas>
               </div>
             </div>
           </div>
@@ -349,7 +335,6 @@
       </div>
       <!-- End of Main Content -->
 
-      </div>
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
@@ -399,150 +384,7 @@
 
   <!-- Page level plugins -->
   <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="js/history.js"></script>
 
-<!-- グラフ第一弾。既に、jqueryは埋め込まれているので、指定しない。 -->
-  <script type="text/javascript">
-  var ctx = document.getElementById('chart');
-  // var labelplugin = {
-  //   afterDatasetsDraw: function (result) {
-  //     // ラベルのフォントやサイズや、位置を指定する
-  //   }
-  // };
-// 初期値NULLの配列を定義。ここに、jsonファイルのvalue（今回は数値）に当たる部分が入る。
-// jsonファイルは、「his_ingre.json」という名前で同配下に格納
-var clab = [];
-$(function(){$.getJSON("http://localhost:3004/histories/1", function(balance){
-  // 変数「balance」は、jsonのkey:valueの形をしている為、valueを取ってくるために「変数.key」
-  // でvalueを取る。
-  
-clab.push(balance.energy,balance.protein,balance.lipid,balance.sugar,balance.dietary_fiber,balance.calcium,balance.iron,balance.magnesium,balance.rin,balance.calcium,balance.vitamin_a,
-balance.vitamin_b1,balance.vitamin_b2,balance.vitamin_b6,balance.vitamin_b12,balance.niacin,balance.pantothenic_acid,balance.folic_acid,balance.vitamin_c,balance.vitamin_d,balance.vitamin_e
-);
-
-  // for(var i = 0; i < len; i++) {
-  //     clab.push(balance[i]);
-
-      var options = {
-         scales: {
-             xAxes: [{
-                 ticks: {
-                     min: 0
-                 }
-             }]
-         },
-         tooltips: {enabled: false
-         }
-      };
-
-        var chart = new Chart(ctx, {
-          type: 'horizontalBar',
-          // ここまできて、dataの定義を入力。先ほど入れた配列を、「data : clab」という形で宣言
-          data: {labels: ["エネルギー(kcal)","タンパク質(g)","脂質(g)","糖質(g)","食物繊維(g)","カリウム(mg)","カルシウム(mg)","鉄(mg)","マグネシウム(mg)","リン(mg)","ビタミンＡ(μg)","ビタミンＢ１(mg)","ビタミンＢ２(mg)","ビタミンＢ６(mg)","ビタミンＢ１２(mg)","ナイアシン(mg)","パントテン酸(mg)","葉酸(μg)","ビタミンＣ(mg)","ビタミンＤ(μg)","ビタミンＥ(mg)"],
-                              datasets: [{
-                                  label: '達成度(%)',
-                                  data: clab,
-                                  backgroundColor: 'rgba(255, 0, 0, 255)'
-                              }]
-                          }
-          // options: options,
-          // plugins: labelplugin
-        });
-      });
-    });
-
-   </script>
-<!-- 2回目以降（１回目と同様、変数名を変えただけ） -->
-   <script type="text/javascript">
-   var wio = document.getElementById('chart_sub1');
-   // var labelplugin = {
-   //   afterDatasetsDraw: function (result) {
-   //     // ラベルのフォントやサイズや、位置を指定する
-   //   }
-   // };
- var qq = [];
- $(function(){$.getJSON("http://localhost:3004/histories/2", function(vlce){
- qq.push(vlce.energy,vlce.protein,vlce.lipid,vlce.sugar,vlce.dietary_fiber,vlce.calcium,vlce.iron,vlce.magnesium,vlce.rin,vlce.calcium,vlce.vitamin_a,
- vlce.vitamin_b1,vlce.vitamin_b2,vlce.vitamin_b6,vlce.vitamin_b12,vlce.niacin,vlce.pantothenic_acid,vlce.folic_acid,vlce.vitamin_c,vlce.vitamin_d,vlce.vitamin_e
- );
-
-   // for(var i = 0; i < len; i++) {
-   //     clab.push(balance[i]);
-
-       var options = {
-          scales: {
-              xAxes: [{
-                  ticks: {
-                      min: 0
-                  }
-              }]
-          },
-          tooltips: {enabled: false
-          }
-       };
-
-         var chart_sub1 = new Chart(wio, {
-           type: 'horizontalBar',
-           data: {labels: ["エネルギー(kcal)","タンパク質(g)","脂質(g)","糖質(g)","食物繊維(g)","カリウム(mg)","カルシウム(mg)","鉄(mg)","マグネシウム(mg)","リン(mg)","ビタミンＡ(μg)","ビタミンＢ１(mg)","ビタミンＢ２(mg)","ビタミンＢ６(mg)","ビタミンＢ１２(mg)","ナイアシン(mg)","パントテン酸(mg)","葉酸(μg)","ビタミンＣ(mg)","ビタミンＤ(μg)","ビタミンＥ(mg)"],
-                               datasets: [{
-                                   label: '達成度(%)',
-                                   data: qq,
-                                   backgroundColor: 'rgba(0,0,255,1)'
-                               }]
-                           }
-           // options: options,
-           // plugins: labelplugin
-         });
-       });
-     });
-      </script>
-
-     <script type="text/javascript">
-     var dlk = document.getElementById('chart_sub2');
-     // var labelplugin = {
-     //   afterDatasetsDraw: function (result) {
-     //     // ラベルのフォントやサイズや、位置を指定する
-     //   }
-     // };
-     var fi = [];
-     $(function(){$.getJSON("http://localhost:3004/histories/3", function(poince){
- fi.push(poince.energy,poince.protein,poince.lipid,poince.sugar,poince.dietary_fiber,poince.calcium,poince.iron,poince.magnesium,poince.rin,poince.calcium,poince.vitamin_a,
- poince.vitamin_b1,poince.vitamin_b2,poince.vitamin_b6,poince.vitamin_b12,poince.niacin,poince.pantothenic_acid,poince.folic_acid,poince.vitamin_c,poince.vitamin_d,poince.vitamin_e
-     );
-
-     // for(var i = 0; i < len; i++) {
-     //     clab.push(balance[i]);
-
-         var options = {
-            scales: {
-                xAxes: [{
-                    ticks: {
-                        min: 0
-                    }
-                }]
-            },
-            tooltips: {enabled: false
-            }
-         };
-
-           var chart_sub2 = new Chart(dlk, {
-             type: 'horizontalBar',
-             data: {labels: ["エネルギー(kcal)","タンパク質(g)","脂質(g)","糖質(g)","食物繊維(g)","カリウム(mg)","カルシウム(mg)","鉄(mg)","マグネシウム(mg)","リン(mg)","ビタミンＡ(μg)","ビタミンＢ１(mg)","ビタミンＢ２(mg)","ビタミンＢ６(mg)","ビタミンＢ１２(mg)","ナイアシン(mg)","パントテン酸(mg)","葉酸(μg)","ビタミンＣ(mg)","ビタミンＤ(μg)","ビタミンＥ(mg)"],
-                                 datasets: [{
-                                     label: '達成度(%)',
-                                     data: fi,
-                                     backgroundColor: 'rgba(255, 100, 100, 1)'
-                                 }]
-                             }
-             // options: options,
-             // plugins: labelplugin
-           });
-         });
-       });
-
-    </script>
-
-
-  </body>
-
- </html>
-
+</body>
+</html>
