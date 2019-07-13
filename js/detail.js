@@ -98,7 +98,7 @@ $(function() {
 
   const BG_COLOR = ["royalblue", "red", "teal"];
 
-  $("#btn_weekly").on("click", function() {
+  $(".btn_weekly").on("click", function() {
     const CONS_URI = "http://localhost:3004/";
     const CONS_PATH = "histories/";
     var uri_path = CONS_URI + CONS_PATH;

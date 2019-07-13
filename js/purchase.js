@@ -42,15 +42,29 @@ function executeGetPurchases() {
 }
 
 function displayOrderList(response) {
+  let totalPrice = 0;
+  const orderTableBodyElement = document.getElementById("order-course-table-body");
   for (let i = 0; i < response.length; i++) {
-    const orderTableBodyElement = document.getElementById("order-course-table-body");
+    const dateTotalPrice = response[i].total_price;
+    const formattedDateTotalPrice = formatPrice(dateTotalPrice);
     orderTableBodyElement.insertAdjacentHTML(
       "beforeend",
-      `<tr><td>${i + 1}</td><td>${response[i].date} ${response[i].course_name}</td><td>￥${
-        response[i].total_price
-      }</td></tr><tr>`
+      `<tr><td>${i + 1}</td><td>${response[i].date} ${
+        response[i].course_name
+      }</td><td></td><td align="right">￥${formattedDateTotalPrice}</td></tr><tr>`
     );
+    totalPrice += dateTotalPrice;
   }
+  console.log(`totalPrice: ${totalPrice}`);
+  const formattedTotalPrice = formatPrice(totalPrice);
+  orderTableBodyElement.insertAdjacentHTML(
+    "beforeend",
+    `<tr><td></td><td></td><td style="font-weight:bold">合計金額</td><td style="font-weight:bold" align="right">￥${formattedTotalPrice}</td></tr><tr>`
+  );
+}
+
+function formatPrice(price) {
+  return Number(price).toLocaleString();
 }
 
 function initOrderButton() {
